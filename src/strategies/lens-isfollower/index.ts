@@ -7,8 +7,8 @@ export const version = '0.1.0';
 
 const lensHubProxyAddress = '0xF6BF84E5df229029C9D36dC7ABaCDBE9c0bd7b4F';
 const abi = [
-  'function getProfileIdByHandle(string calldata handle) external view override returns (uint256)',
-  'function getFollowNFT(uint256 profileId) external view override returns (address)',
+  'function getProfileIdByHandle(string calldata handle) external view returns (uint256)',
+  'function getFollowNFT(uint256 profileId) external view returns (address)',
   'function balanceOf(address account) external view returns (uint256)'
 ];
 
@@ -26,7 +26,8 @@ export async function strategy(
   const profileId: BigNumber = await call(provider, abi, [
     lensHubProxyAddress,
     'getProfileIdByHandle',
-    [options.profileHandle]
+    [options.profileHandle],
+    { blockTag }
   ]);
   console.log('profileId: ', profileId.toString());
 
@@ -34,7 +35,8 @@ export async function strategy(
   const followNFTAddress = await call(provider, abi, [
     lensHubProxyAddress,
     'getFollowNFT',
-    [profileId]
+    [profileId],
+    { blockTag }
   ]);
   console.log('followNFT: ', followNFTAddress.toString());
 
