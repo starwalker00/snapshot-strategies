@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Example query",
+        "strategy": {
+            "name": "lens-vefollow",
+            "params": {
+                "address": "0xF6BF84E5df229029C9D36dC7ABaCDBE9c0bd7b4F",
+                "symbol": "LENSVEFOLLOW",
+                "profileHandle": "starwalker00"
+            }
+        },
+        "network": "80001",
+        "addresses": [
+            "0xe6d41527E692BBeE73655281913AA7E482F14866",
+            "0x23f67feb67a3aa1e376d23beaa3f241217e427c9",
+            "0x54685c62db8e16b1484768db8e0daf3c644d50bf",
+            "0x766bc61d3150232f6f4e1d81633d68f3a94879e3",
+            "0x235596F35fdeAc45a59bf38640dD68F19A85dE39"
+        ],
+        "snapshot": 25305613
+    }
+]
